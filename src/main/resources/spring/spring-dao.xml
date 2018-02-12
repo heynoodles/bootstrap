@@ -40,9 +40,9 @@
               <property name="mapperLocations" value="classpath:mapper/*.xml" />
        </bean>
 
-       <bean id="mySqlSessionTemplate" class="com.noodles.aop.MySqlSessionTemplate">
+       <!--<bean id="mySqlSessionTemplate" class="com.noodles.aop.MySqlSessionTemplate"/>-->
 
-       </bean>
+       <!--</bean>-->
 
        <!-- 4.配置扫描Dao接口包，动态实现Dao接口，注入到spring容器中 -->
        <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
@@ -50,6 +50,6 @@
               <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
               <!-- 给出需要扫描Dao接口包 -->
               <property name="basePackage" value="com.noodles.dao" />
-              <property name="sqlSessionTemplateBeanName" value=""/>
+              <!--<property name="sqlSessionTemplateBeanName" value=""/>-->
        </bean>
 </beans>
